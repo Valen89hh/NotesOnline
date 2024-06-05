@@ -7,24 +7,6 @@
 </head>
 <body>
 
-    <h1>User Page</h1>
-    <p id="userId">User ID: </p>
-    <script>
-        // Función para obtener el parámetro de la URL
-        function getURLParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
 
-        // Opción alternativa: obtener parámetro desde la ruta
-        function getPathParam() {
-            const pathParts = window.location.pathname.split('/');
-            return pathParts[pathParts.length - 1];
-        }
-
-        // Usar la función para obtener el parámetro y mostrarlo
-        const userId = getPathParam();
-        document.getElementById('userId').textContent = `User ID: ${userId}`;
-    </script>
 </body>
 </html>
