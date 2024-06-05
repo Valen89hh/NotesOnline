@@ -17,8 +17,8 @@ router.get('/join', (req, res) => {
 });
 
 // Ruta para Contact
-router.get('/server/:id', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/server.html'));
+router.get('/sala/:id', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/sala.html'));
 });
 
 export default router;

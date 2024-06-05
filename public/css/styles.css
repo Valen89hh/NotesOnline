@@ -1,0 +1,64 @@
+/* public/css/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Wendy+One&display=swap');
+
+:root {
+    --primary-color: #FEC859;
+    --secondary-color: #E9C372;
+    --background-color: #DA8D46;
+    --text-color: #33322E;
+    --success: #77DD77;
+    --error: #FF6961;
+    --note-crema: #F9F3E5;
+    --note-yellow-dark: #F4D799;
+    --note-peach-dark: #F6A89E;
+    --note-aqua-dark: #8CD4CB;
+
+    --font-family-primary: "Righteous", sans-serif;
+    --font-family-secondary: "Wendy One", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-primary);
+}
+
+.logo{
+    font-size: 10rem;
+    font-family: var(--font-family-secondary) !important;
+}
+
+.logo-small{
+    font-family: var(--font-family-secondary) !important;
+    font-size: 2rem;
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Otros estilos comunes */
