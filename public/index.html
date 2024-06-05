@@ -3,29 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socket.io Demo</title>
-    <style>
-        .nota {
-            position: absolute;
-            background-color: yellow;
-            border: 1px solid black;
-            padding: 5px;
-            cursor: move;
-        }
-    </style>
+    <title>NoteSync</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
-<body>
-    <h1>Note online</h1>
-    
-    <button id="btnCreate">Create Server</button>
-
-    <input type="text" id="iptNameServer">
-    <button id="btnJoin">Join</button>
-
-    <input type="text" id="nuevaNota" placeholder="Escribe una nueva nota">
-    <button id="btnAgregar">Agregar</button>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/client.js"></script>
+<body class="background">
+    <img src="/img/logo.svg" alt="">
+    <h1 class="logo">NoteSync</h1>
 </body>
 </html>
