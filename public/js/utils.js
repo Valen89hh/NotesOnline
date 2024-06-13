@@ -8,3 +8,7 @@ function getPathParam() {
     const pathParts = window.location.pathname.split('/');
     return pathParts[pathParts.length - 1];
 }
+
+function generateId(){
+    return uuid.v4()
+}
