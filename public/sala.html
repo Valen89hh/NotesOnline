@@ -3,13 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server</title>
+    
+    
+    <meta property="og:title" content="Tu Título Aquí">
+    <meta property="og:description" content="Tu descripción o texto adicional aquí">
+    <meta property="og:url" content="https://chatgpt.com/c/ba1330ee-c84d-4f62-8067-7c236d3fe634">
+    <meta property="og:image" content="https://image.freepik.com/vector-gratis/el-bloc-de-notas-con-el-texto-y-lapiz_17-1106224733.jpg">
+
+    <title>NoteSycn-Room</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sala.css">
 </head>
 <body>
+    <header>
+        <div class="content-logo">
+            <img src="/img/logo.svg" width="40" alt="">
+            <h1 class="logo-small hidden-sm">NoteSync</h1>
+        </div>
 
-<h1>Esta es la sala</h1>
+        <div class="content-project-name">
+            <input placeholder="----name----" id="iptProjectName" type="text" value="Projec Name">
+        </div>
+
+        <div class="actions">
+            <button class="btn-users">
+                <img src="/img/users.svg" alt="">
+            </button>
+            <button class="btn-share">
+                <img src="/img/share.svg" alt="">
+            </button>
+            <button class="btn-menu">
+                <img src="/img/menu.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <main id="pizarra">
+
+    </main>
+    <div id="btnAddNote">
+        <img src="/img/add-note.svg" alt="">
+    </div>
+
+    <button id="btnDeleteNote" class="card-delete-note btn-none hidden">
+        <img  src="/img/trush.svg" alt="">
+    </button>
+
+    <div id="containerCenter" class="container-center modal-container hidden" >
+        <form action="" id="cardAddNote" class="card-add-note hidden">
+            <h3>Add Note</h3>
+            <textarea name="" id="txtNote"></textarea>
+            <div class="footer-card-add-note">
+                <div class="colors">
+                    <div id="btnColorYellow" class="color-yellow-dark circle"></div>
+                    <div id="btnColorPeach" class="color-peach-dark circle"></div>
+                    <div id="btnColorAqua" class="color-aqua-dark circle"></div>
+                </div>
+                <div class="action-add-note">
+                    <button type="submit" id="btnReady">Ready</button>
+                    <button type="button" id="btnCancel">Cancel</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="cardShareNote" class="card-share-room card hidden">
+            <h2>Share Room</h2>
+            <div class="divider-strong"></div>
+            <div class="container-id">
+                <span class="id-room">ehiuUHIEHD</span>
+                <button class="btn-copy">
+                    <img  src="/img/copy.svg" alt="">
+                </button>
+            </div>
+            <div class="red-socials">
+                <button class="btn-share-whatsapp">
+                    <img src="/img/whatsapp.svg" alt="">
+                </button>
+                <button  class="btn-share-facebook">
+                    <img src="/img/facebook.svg" alt="">
+                </button>
+                <button  class="btn-share-link">
+                    <img width="25" src="/img/copy-link.svg" alt="">
+                </button>
+            </div>
+
+            <button id="btnCloseCardShare">
+                <img src="/img/close.svg" alt="">
+            </button>
+        </div>
+
+        <form id="cardNameUser" action="" class="card hidden">
+            <h2 class="card-header">Enter your username</h2>
+            <div class="divider-strong"></div>
+            <div class="card-body">
+                <input required minlength="5" maxlength="15" id="txtNameUser" type="text" placeholder="name">
+                <button id="btnNameUser" class="btn-success">Ready</button>
+            </div>
+        </form>
+
+        <div id="loaderCubic" class="sk-cube-grid hidden">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+    </div>
+    
+    <div id="containerRight" class="modal-container hidden hidden-animation">
+        <aside id="usersMenu" class="aside-menu container-right close-menu-right">
+            <div class="header-aside-menu">
+                <div class="name-user-menu">
+                    <h2 id="nameUser">Rodrigo</h2>
+                    <button class="btn-none" id="btnCloseUsersMenu">
+                        <img src="/img/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="divider-light"></div>
+            </div>
+            <section class="aside-body-menu">
+                <div class="card card-shadow">
+                    <h2 class="card-header">Users</h2>
+                    <div class="divider-strong"></div>
+                    <div class="card-body">
+                        <ul class="list-users">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="card card-shadow mt-medium">
+                    <h2 class="card-header">Leave Room</h2>
+                    <div class="divider-strong"></div>
+                    <div class="card-body">
+                        <button class="btn-leave-room">
+                            <img width="20" src="/img/trush.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="aside-footer-menu">
+                <div class="divider-light"></div>
+                <p>© 2024 NoteSync. All rights reserved.</p>
+            </div>
+        </aside>
+    </div>
+
+    <div id="containerFull" class="modal-container hidden hidden-animation">
+        <aside id="menuSmall"  class="aside-menu close-menu-right">
+            <div class="header-aside-menu">
+                <div class="name-user-menu">
+                    <div class="content-logo">
+                        <img src="/img/logo.svg" width="40" alt="">
+                        <h1 class="logo-small">NoteSync</h1>
+                    </div>
+                    <button class="btn-none" id="btnCloseMenu">
+                        <img src="/img/close.svg" alt="">
+                    </button>
+                </div>
+                <div class="divider-light"></div>
+            </div>
+            <section class="aside-body-menu">
+                <div class="card-share-room card card-shadow">
+                    <h2>Share Room</h2>
+                    <div class="divider-strong"></div>
+                    <div class="container-id">
+                        <span class="id-room">ehiuUHIEHD</span>
+                        <button class="btn-copy">
+                            <img  src="/img/copy.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="red-socials">
+                        <button class="btn-share-whatsapp">
+                            <img src="/img/whatsapp.svg" alt="">
+                        </button>
+                        <button class="btn-share-facebook">
+                            <img src="/img/facebook.svg" alt="">
+                        </button>
+                        <button class="btn-share-link">
+                            <img width="25" src="/img/copy-link.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-shadow mt-medium">
+                    <h2 class="card-header">Users</h2>
+                    <div class="divider-strong"></div>
+                    <div class="card-body">
+                        <ul class="list-users">
+                        </ul>
+                    </div>
+                </div>
+                <div class="card card-shadow mt-medium">
+                    <h2 class="card-header">Leave Room</h2>
+                    <div class="divider-strong"></div>
+                    <div class="card-body">
+                        <button class="btn-leave-room">
+                            <img width="20" src="/img/trush.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <div class="aside-footer-menu">
+                <div class="divider-light"></div>
+                <p>© 2024 NoteSync. All rights reserved.</p>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/user.js"></script>
+    <script src="/js/note.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/sala.js"></script>
+
 </body>
 </html>
