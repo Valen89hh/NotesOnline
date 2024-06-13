@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join a Server</title>
+    <title>Join a Room</title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/join.css">
 </head>
 <body>
-    <h1>Unete a un servidor para empezar a compartir notas</h1>
+    <div class="square square-yellow"></div>
+    <div class="square square-blue"></div>
+    <div class="square square-red"></div>
+    <div class="square square-green"></div>
+    <div class="square square-sky"></div>
 
+    <h4 class="text-background txt-interactive">interactive</h4>
+    <h4 class="text-background txt-simple">simple</h4>
+    <h4 class="text-background txt-collaborative">collaborative</h4>
+    <h4 class="text-background txt-in-real-time">in real time</h4>
+    <h4 class="text-background txt-fast">fast</h4>
+    <h4 class="text-background txt-effective">effective</h4>
+
+    <main>
+        <form action="" class="content-form">
+            <h1 class="title-logo">NoteSync</h1>
+            
+            <div class="card-join">
+                <button id="btnCreate">Create server</button>
+                <div class="input-pin">
+                    <input id="iptPin" type="text" placeholder="Enter pin">
+                    <button id="btnJoin">
+                        <img src="/img/click-join.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="/js/join.js"></script>
 </body>
 </html>

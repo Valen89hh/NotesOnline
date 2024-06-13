@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+.img-background{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+body{
+    background-color: var(--background-color);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.content-form{
+    width: 50%;
+    max-width: 50rem;
+    min-width: 40rem;
+    text-align: center;
+}
+
+.square{
+    position: absolute;
+    z-index: 1;
+}
+
+.square-yellow{
+    background-color: var(--primary-color);
+    width: 35rem;
+    height: 35rem;
+    transform: rotate(30deg)  translateY(10rem)
+}
+
+.square-blue{
+    background-color: #84B6F4;
+    width: 30rem;
+    height: 30rem;
+    top: 0;
+    left: 50%;
+    transform: rotate(-8deg)  translateY(-90%)
+}
+
+.square-red{
+    background-color: #FF6961;
+    width: 30rem;
+    height: 30rem;
+    top: 30%;
+    right: 0;
+    transform: rotate(-5deg) translateX(30%)
+}
+
+.square-green{
+    background-color: #77DD77;
+    width: 20rem;
+    height: 20rem;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-25deg) translateY(50%) translateX(-40%)
+}
+
+.square-sky{
+    background-color: #01FFFF;
+    width: 30rem;
+    height: 30rem;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-7deg) translateX(50%) translateY(90%)
+}
+
+
+.text-background{
+    position: absolute;
+    z-index: 2;
+    font-family: "Stylish", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8E4A1E;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.txt-interactive{
+    top: 10rem;
+    left:10rem;
+    transform: rotate(-7deg);
+}
+
+.txt-simple{
+    top: 15rem;
+    left: 50%;
+    right: 50%;
+}
+
+.txt-in-real-time{
+    top: 0;
+    right: 0;
+    transform: translateY(5rem) translateX(-10rem);
+}
+
+.txt-collaborative{
+    bottom: 0;
+    left: 0;
+    transform: rotate(-4deg) translateX(10rem) translateY(-5rem);
+}
+
+.txt-fast{
+    top: 50%;
+    bottom: 50%;
+    right: 10rem;
+}
+
+.txt-effective{
+    right: 10rem;
+    bottom: 5rem;
+}
+
+.card-join{
+    width: 100%;
+    border-radius: 1rem;
+    border: 3px solid var(--text-color);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 10px 10px 4px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#btnCreate{
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnCreate:hover{
+    background-color:#a66439;
+}
+
+.title-logo{
+    font-family: var(--font-family-secondary);
+    font-size: 8rem;
+    color: white;
+    margin: 3rem;
+    text-shadow: 10px 10px 0px rgba(0, 0, 0, 1); /* Desplazamiento X, Desplazamiento Y, Desenfoque, Color */
+}
+
+
+.input-pin{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    border: 2px var(--background-color) solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #F2E8CE;
+}
+
+.input-pin input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.7rem;
+    text-align: center;
+
+
+}
+
+.input-pin input::placeholder{
+    color: #00000075;
+}
+
+.input-pin button{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #1E0B01;
+    cursor: pointer;
+}
+
+.input-pin button img{
+    width: 2rem;
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+    .title-logo{
+        font-size: 7rem;
+    }
+
+    .txt-effective{
+        display: none;
+    }
+
+    .txt-interactive{
+        display: none;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+    .title-logo{
+        font-size: 4rem;
+    }
+
+    .content-form{
+        width: 100%;
+        margin: 0 2rem;
+        min-width: 0px;
+    }
+}

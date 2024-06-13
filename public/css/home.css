@@ -1,3 +1,162 @@
 .background{
     background-color: var(--background-color);
 }
+
+main{
+    display: flex;
+    gap: 10rem;
+    max-width: 120rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo{
+    font-size: 10rem;
+    font-family: var(--font-family-secondary) !important;
+}
+
+.content-logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-logo img{
+    width: 25rem;
+    margin: 0 auto;
+}
+
+.content-logo p{
+    margin: 0;
+    font-size: 3.3rem;
+}
+
+.content-logo .btn-started{
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.content-logo h1{
+    margin: 0;
+}
+
+.content-notes{
+    display: flex;
+    gap: 4rem;
+}
+
+.content-notes .cuadrilla{
+    display: flex;
+    flex-direction: column;
+}
+
+.g-5{
+    gap: 5rem;
+}
+
+.g-2{
+    
+    gap: 2rem;
+}
+
+.img-note{
+    width: 25rem;
+}
+
+@media (max-width: 1200px) {
+    .img-note{
+        width: 20rem;
+    }
+
+    .logo{
+        font-size: 8rem;
+    }
+
+    .content-logo img{
+        width: 20rem;
+    }
+
+    .content-logo p{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 992px){
+    main{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        gap: 0;
+    }
+
+    .content-logo{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-logo img{
+        width: 25rem;
+    }
+
+    .logo{
+        font-size: 10rem;
+    }
+
+    .content-logo p{
+        font-size: 3.3rem;
+    }
+
+
+    .content-notes{
+        padding-bottom: 10rem;
+    }
+}
+
+@media (max-width: 576px){
+    .img-note{
+        width: 20rem;
+    }
+
+    .logo{
+        font-size: 8rem;
+    }
+
+    .content-logo img{
+        width: 20rem;
+    }
+
+    .content-logo p{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-notes{
+        flex-direction: column;
+    }
+
+    .logo{
+        font-size: 6rem;
+    }
+
+    .content-logo p{
+        font-size: 2.2rem;
+    }
+
+    .content-logo img{
+        width: 16rem;
+    }
+}

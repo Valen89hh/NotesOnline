@@ -1,0 +1,521 @@
+body{
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.mt-medium{
+    margin-top: 2rem;
+}
+
+.hidden-sm{
+    display: inherit;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.hidden-animation{
+    animation: hidden-anim 0.3s forwards ease-out;
+}
+
+.visible-animation{
+    animation: visible-anim 0.3s forwards ease-in;
+}
+
+
+#pizarra{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.container-center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-logo{
+    display: inline-flex;
+    gap: 4px;
+}
+
+.content-project-name #iptProjectName{
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 1rem;
+    width: fit-content;
+    text-align: center;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.content-project-name #iptProjectName:focus{
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: var(--note-yellow-dark);
+}
+
+.actions{
+    display: flex;
+    gap: 2rem;
+}
+
+.actions .btn-users, .btn-share, .btn-menu{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.actions .btn-menu{
+    display: none;
+}
+
+#btnAddNote{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+#btnAddNote img{
+    width: 6rem;
+}
+
+
+.modal-container{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0,0.25);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card-add-note{
+    max-width: 50rem;
+    width: 50%;
+    min-width: 30rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    background-color: var(--note-crema);
+}
+
+.card-add-note #txtNote{
+    border-radius: 1rem;
+    resize: none;
+    width: 100%;
+    height:25rem;
+    padding: 1rem;
+    margin: 1rem 0px;
+}
+
+.card-add-note h3{
+    margin: 0;
+    text-align: center;
+}
+
+.footer-card-add-note{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.colors{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle-small{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+
+.color-aqua-dark{
+    background-color: var(--note-aqua-dark);
+}
+
+.color-peach-dark{
+    background-color: var(--note-peach-dark);
+}
+
+.color-yellow-dark{
+    background-color: var(--note-yellow-dark);
+}
+
+.color-bronw{
+    background-color: #8E4A1E;
+}
+
+
+.action-add-note{
+    display: flex;
+    gap: 2rem;
+    width: auto;
+}
+
+.action-add-note button{
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-success{
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: var(--success);
+}
+
+.action-add-note #btnReady{
+    background-color: var(--success);
+}
+
+.action-add-note #btnCancel{
+    background-color: var(--error);
+}
+
+
+.card{
+    max-width: 50rem;
+    width: 50%;
+    min-width: 30rem;
+    border-radius: 1rem;
+    border: 3px solid var(--text-color);
+    background-color: var(--note-crema);
+}
+
+.card-header{
+    text-align: center;
+    margin: 1.2rem;
+}
+
+.card-body{
+    padding: 1rem;
+}
+.card-share-room{
+    position: relative;
+}
+
+.card-shadow{
+    box-shadow: 10px 10px 0 var(--text-color);
+}
+
+.card-share-room #btnCloseCardShare{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card-share-room h2{
+    text-align: center;
+}
+
+.card-share-room .container-id{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.card-share-room .id-room{
+    font-size: 3rem;
+}
+
+.card-share-room .btn-copy{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#cardNameUser .card-body{
+    display: flex;
+    gap: 1rem;
+}
+
+#cardNameUser #txtNameUser{
+    padding: 1rem;
+    border-radius: .5rem;
+    flex-grow: 1;
+}
+
+
+.divider-strong{
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+}
+.divider-light{
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+
+
+.red-socials{
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.red-socials button{
+    border-radius: 50%;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.red-socials .btn-share-whatsapp{
+    background-color: #25D366;
+}
+
+.red-socials .btn-share-facebook{
+    background-color: #4267B2;
+}
+
+.red-socials .btn-share-link{
+    background-color: #00B2FF;
+}
+
+.btn-none{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.aside-menu{
+    background-color: var(--primary-color);
+    width: fit-content;
+    height: 100%;
+    border-left: 2px solid var(--text-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+}
+
+.aside-menu .header-aside-menu .name-user-menu{
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aside-menu .header-aside-menu #nameUser{
+    margin: 0;
+}
+
+.aside-menu .aside-body-menu{
+    padding: 2rem 2rem;
+    flex-grow: 1;
+}
+
+.aside-menu .aside-footer-menu{
+    text-align: center;
+}
+
+.btn-leave-room{
+    width: 100%;
+    background-color: var(--error);
+    border: none;
+    padding: .7rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-users{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.list-users .item-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.list-users .item-user h3{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+
+.container-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.open-menu-right{
+    animation: open-right 0.3s forwards ease-in;
+}
+
+
+.close-menu-right{
+    animation: close-right 0.3s forwards ease-out;
+}
+
+#menuSmall{
+    width: 100%;
+}
+
+#menuSmall .card{
+    width: 100%;
+    max-width: none;
+    min-width: 0px;
+}
+
+
+.note{
+    position: absolute;
+    width: fit-content;
+    max-width: 25rem;
+    border-radius: 1rem;
+    border: 3px solid var(--text-color);
+    background-color: var(--note-crema);
+    padding: 1rem;
+    box-shadow: 10px 10px 0 var(--text-color);
+    top: 10rem;
+    left: 30px;
+    cursor: pointer;
+}
+
+.card-delete-note{
+    background-color: var(--error);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+}
+
+.card-delete-note img{
+    width: 2rem;
+}
+
+@keyframes open-right {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes close-right {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes visible-anim {
+    from{
+        opacity: 0;
+        display: none;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes hidden-anim {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .footer-card-add-note{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .action-add-note{
+        width: 100%;
+    }
+
+    .actions .btn-users, .btn-share{
+        display: none;
+    }
+
+    .actions .btn-menu{
+        display: inline-flex;
+    }
+
+
+    .hidden-sm{
+        display: none;
+    }
+
+    #cardNameUser .card-body{
+        flex-direction: column;
+
+    }
+}
